@@ -4,12 +4,13 @@ services:
     env: python
     region: oregon
     rootDir: backend
-    pythonVersion: "3.12"
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: ANTHROPIC_API_KEY
         sync: false
+      - key: PYTHON_VERSION
+        value: "3.12.0"
 
   - type: web
     name: skincare-scanner-frontend
