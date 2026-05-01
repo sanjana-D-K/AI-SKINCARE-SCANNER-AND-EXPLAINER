@@ -460,8 +460,7 @@ export default function HomePage() {
       </main>
 
       {/* ── Footer ────────────────────────────────────────────────────────── */}
-      <footer className="mt-8 pb-8 text-center text-xs text-gray-400 px-4 space-y-1">
-        <p>Skincare Scanner · Powered by <span className="font-semibold text-gray-500">Claude AI</span></p>
+      <footer className="mt-8 pb-8 text-center text-xs text-gray-400 px-4">
         <p>Not medical advice. Always consult a dermatologist for personalised guidance.</p>
       </footer>
     </div>
