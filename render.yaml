@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: skincare-scanner-backend
+    env: python
+    region: oregon
+    rootDir: backend
+    pythonVersion: "3.12"
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+
+  - type: web
+    name: skincare-scanner-frontend
+    env: node
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
+      - key: NODE_VERSION
+        value: "20"
