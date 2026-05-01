@@ -1,0 +1,593 @@
+{
+  "ingredients": [
+    {
+      "inci_name": "Aqua",
+      "aliases": ["Water", "Eau"],
+      "function": "Solvent",
+      "explanation": "Plain water — it's the base of almost every skincare product and helps dissolve other ingredients.",
+      "benefits": ["Hydrates skin", "Helps other ingredients penetrate"],
+      "concerns": [],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Niacinamide",
+      "aliases": ["Nicotinamide", "Vitamin B3"],
+      "function": "Brightening, Pore-minimizing, Anti-inflammatory",
+      "explanation": "A form of Vitamin B3 that shrinks the look of pores, fades dark spots, and calms redness. It's a superstar ingredient for acne-prone skin.",
+      "benefits": ["Reduces pore appearance", "Fades acne marks", "Controls oil production", "Calms redness", "Strengthens skin barrier"],
+      "concerns": ["Very high concentrations (above 10%) may cause flushing in sensitive skin"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "oily": "Excellent — directly reduces excess oil",
+        "dry": "Great — helps repair skin barrier",
+        "combination": "Excellent — balances the T-zone",
+        "sensitive": "Generally well-tolerated; start with lower concentrations"
+      }
+    },
+    {
+      "inci_name": "Salicylic Acid",
+      "aliases": ["BHA", "Beta Hydroxy Acid", "2-Hydroxybenzoic Acid"],
+      "function": "Exfoliant, Anti-acne, Pore-clearing",
+      "explanation": "An oil-soluble acid that gets deep inside pores to dissolve the gunk that causes blackheads and pimples. It's the go-to ingredient for acne.",
+      "benefits": ["Unclogs pores", "Reduces blackheads and whiteheads", "Anti-inflammatory", "Exfoliates dead skin cells"],
+      "concerns": ["Can dry out skin if overused", "May cause sun sensitivity", "Avoid if allergic to aspirin"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "oily": "Excellent — clears pores and reduces shine",
+        "dry": "Use with caution — can be too drying; follow with moisturizer",
+        "combination": "Great for oily zones; use targeted application on dry areas",
+        "sensitive": "Start slowly; may be irritating at high concentrations"
+      }
+    },
+    {
+      "inci_name": "Benzoyl Peroxide",
+      "aliases": ["BPO", "BP"],
+      "function": "Anti-bacterial, Anti-acne",
+      "explanation": "A powerful acne-fighter that kills the bacteria responsible for causing pimples. Very effective but can be harsh.",
+      "benefits": ["Kills acne-causing bacteria", "Reduces active breakouts quickly", "Works on inflamed pimples"],
+      "concerns": ["Can be very drying and irritating", "Bleaches fabric and hair", "May cause peeling", "Start with low concentrations"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "oily": "Very effective; watch for over-drying",
+        "dry": "High risk of irritation; use sparingly as spot treatment",
+        "combination": "Good as spot treatment; avoid dry areas",
+        "sensitive": "Often too harsh; try alternatives like niacinamide first"
+      }
+    },
+    {
+      "inci_name": "Retinol",
+      "aliases": ["Vitamin A", "Retinyl Propionate"],
+      "function": "Anti-aging, Exfoliant, Acne treatment",
+      "explanation": "A Vitamin A derivative that speeds up skin cell turnover, clears pores, and reduces acne scars over time. One of the most proven skincare ingredients.",
+      "benefits": ["Speeds cell turnover", "Clears clogged pores", "Fades acne scars", "Reduces fine lines"],
+      "concerns": ["Causes purging initially", "Makes skin sensitive to sun", "Can irritate sensitive skin", "Avoid during pregnancy"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "oily": "Excellent long-term; expect initial dryness",
+        "dry": "Start with low concentration and buffer with moisturizer",
+        "combination": "Good; apply to oily zones first",
+        "sensitive": "Start very slow (1-2 nights/week); use lowest available concentration"
+      }
+    },
+    {
+      "inci_name": "Retinyl Palmitate",
+      "aliases": ["Vitamin A Palmitate"],
+      "function": "Mild retinoid",
+      "explanation": "A gentler form of Vitamin A. It converts to retinol in the skin, so it's less potent but also less irritating.",
+      "benefits": ["Mild exfoliation", "Gentle cell turnover boost", "Less irritating than retinol"],
+      "concerns": ["Much less effective than retinol", "May not be strong enough for active acne"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Hyaluronic Acid",
+      "aliases": ["Sodium Hyaluronate", "HA"],
+      "function": "Humectant, Hydrating",
+      "explanation": "A moisture magnet that pulls water into your skin and keeps it plump and hydrated. It holds up to 1000x its weight in water.",
+      "benefits": ["Deep hydration", "Plumps skin", "Helps other actives absorb better", "Lightweight"],
+      "concerns": ["In very dry climates, can pull moisture from skin if no occlusive is used"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "oily": "Great — hydrates without adding oil",
+        "dry": "Essential — use under a richer moisturizer",
+        "combination": "Perfect lightweight hydration",
+        "sensitive": "Very gentle and well-tolerated"
+      }
+    },
+    {
+      "inci_name": "Glycerin",
+      "aliases": ["Glycerol"],
+      "function": "Humectant, Moisturizer",
+      "explanation": "A simple, effective moisturizer that draws water to your skin. It's gentle, non-irritating, and found in almost every product.",
+      "benefits": ["Hydrates skin", "Strengthens skin barrier", "Very gentle"],
+      "concerns": [],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Glycolic Acid",
+      "aliases": ["AHA", "Alpha Hydroxy Acid"],
+      "function": "Chemical exfoliant",
+      "explanation": "An acid that removes dead skin cells from the surface, revealing brighter, smoother skin underneath. Great for fading acne marks.",
+      "benefits": ["Exfoliates dead skin", "Brightens complexion", "Fades acne marks", "Improves texture"],
+      "concerns": ["Increases sun sensitivity", "Can be irritating", "Don't combine with other strong actives"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "oily": "Great; removes surface buildup",
+        "dry": "Use at low concentration; always moisturize after",
+        "combination": "Good; focus on oily areas",
+        "sensitive": "May be too harsh; try lactic acid instead"
+      }
+    },
+    {
+      "inci_name": "Lactic Acid",
+      "aliases": ["L-Lactic Acid"],
+      "function": "Chemical exfoliant, Humectant",
+      "explanation": "A gentler acid than glycolic that exfoliates while also hydrating. Good for beginners or sensitive skin.",
+      "benefits": ["Gentle exfoliation", "Hydrates while exfoliating", "Fades dark spots", "Improves texture"],
+      "concerns": ["Sun sensitivity", "May sting on broken skin"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "sensitive": "One of the gentler acids available"
+      }
+    },
+    {
+      "inci_name": "Ascorbic Acid",
+      "aliases": ["Vitamin C", "L-Ascorbic Acid"],
+      "function": "Antioxidant, Brightening",
+      "explanation": "Pure Vitamin C that brightens skin, fades dark spots from acne, and protects against free radical damage.",
+      "benefits": ["Fades post-acne marks", "Brightens skin", "Antioxidant protection", "Boosts collagen"],
+      "concerns": ["Unstable — oxidizes in light and air", "Can sting on active breakouts", "May irritate sensitive skin at high %"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Azelaic Acid",
+      "aliases": ["Nonanedioic Acid"],
+      "function": "Anti-acne, Brightening, Anti-inflammatory",
+      "explanation": "A multi-tasker that kills acne bacteria, fades dark spots, and calms redness — all with very low irritation. Great for sensitive, acne-prone skin.",
+      "benefits": ["Kills acne bacteria", "Fades post-acne marks", "Anti-inflammatory", "Very gentle"],
+      "concerns": ["May tingle initially", "High concentrations require prescription in some countries"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "sensitive": "One of the most tolerable acne-fighting ingredients"
+      }
+    },
+    {
+      "inci_name": "Ceramide NP",
+      "aliases": ["Ceramide 3", "Ceramide"],
+      "function": "Barrier repair, Moisturizer",
+      "explanation": "A lipid that naturally exists in your skin. In products, ceramides repair the skin barrier, preventing moisture loss and protecting against irritants.",
+      "benefits": ["Repairs damaged skin barrier", "Prevents moisture loss", "Reduces sensitivity", "Supports healing"],
+      "concerns": [],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Dimethicone",
+      "aliases": ["Polydimethylsiloxane", "Cyclomethicone"],
+      "function": "Emollient, Occlusive, Skin protectant",
+      "explanation": "A silicone that creates a smooth, protective film on skin. It locks in moisture and gives products a silky feel.",
+      "benefits": ["Locks in moisture", "Smooths skin texture", "Non-irritating", "Protects skin barrier"],
+      "concerns": ["Some people find it can trap sebum; debate around comedogenicity in acne-prone skin"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 1,
+      "is_active": false,
+      "skin_type_notes": {
+        "oily": "May not suit everyone; patch test recommended"
+      }
+    },
+    {
+      "inci_name": "Fragrance",
+      "aliases": ["Parfum", "Perfume", "Fragrance (unspecified)", "Aroma"],
+      "function": "Scent",
+      "explanation": "Added purely for smell — it has no skin benefit and is one of the most common causes of skin irritation and allergic reactions.",
+      "benefits": [],
+      "concerns": ["Common allergen", "Can trigger breakouts", "Irritates sensitive skin", "May cause contact dermatitis"],
+      "tag": "may_irritate",
+      "acne_friendly": false,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "sensitive": "Strong recommendation to avoid",
+        "oily": "May trigger breakouts in acne-prone skin"
+      }
+    },
+    {
+      "inci_name": "Alcohol Denat.",
+      "aliases": ["Denatured Alcohol", "SD Alcohol", "Alcohol"],
+      "function": "Solvent, Preservative, Astringent",
+      "explanation": "A drying alcohol that can strip your skin's natural moisture barrier. It makes products feel lightweight but causes long-term dryness and irritation.",
+      "benefits": ["Helps products dry quickly", "Lightweight feel"],
+      "concerns": ["Dries out skin", "Disrupts skin barrier", "Increases sensitivity", "Worsens acne in some people"],
+      "tag": "may_irritate",
+      "acne_friendly": false,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "dry": "Avoid if possible",
+        "sensitive": "Avoid",
+        "oily": "May seem helpful short-term but causes rebound oil production"
+      }
+    },
+    {
+      "inci_name": "Sodium Lauryl Sulfate",
+      "aliases": ["SLS", "Sodium Dodecyl Sulfate"],
+      "function": "Surfactant, Cleanser",
+      "explanation": "A strong detergent that creates foam. It cleans effectively but strips the skin of its natural oils, causing dryness and irritation.",
+      "benefits": ["Effective cleansing", "Creates lather"],
+      "concerns": ["Very harsh and stripping", "Damages skin barrier", "Worsens acne in some people", "Common irritant"],
+      "tag": "may_irritate",
+      "acne_friendly": false,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "sensitive": "Strongly recommend avoiding",
+        "dry": "Avoid — will make dryness much worse"
+      }
+    },
+    {
+      "inci_name": "Sodium Laureth Sulfate",
+      "aliases": ["SLES"],
+      "function": "Surfactant, Cleanser",
+      "explanation": "Similar to SLS but slightly gentler. Still a stripping cleanser — better versions use milder surfactants like sodium cocoyl isethionate.",
+      "benefits": ["Cleans skin", "Creates foam"],
+      "concerns": ["Can be drying", "May irritate sensitive skin"],
+      "tag": "may_irritate",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Methylparaben",
+      "aliases": ["Paraben", "Propylparaben", "Butylparaben", "Ethylparaben"],
+      "function": "Preservative",
+      "explanation": "A preservative that prevents bacteria and mold growth in products. Safe in the low concentrations used in cosmetics according to most regulatory bodies.",
+      "benefits": ["Keeps product safe from microbial growth", "Extends shelf life"],
+      "concerns": ["Weak estrogen mimic — ongoing research; currently considered safe at cosmetic concentrations", "Some people prefer to avoid as a precaution"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Phenoxyethanol",
+      "aliases": [],
+      "function": "Preservative",
+      "explanation": "A common, widely-used preservative that keeps products fresh. Generally considered safe and gentler than many alternatives.",
+      "benefits": ["Prevents microbial contamination", "Broadly used and well-studied"],
+      "concerns": ["Very high concentrations may irritate; cosmetic use is well within safe limits"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Zinc Oxide",
+      "aliases": ["Zincum Oxidatum"],
+      "function": "Sunscreen, Anti-inflammatory, Anti-acne",
+      "explanation": "A physical sunscreen mineral that sits on top of the skin and reflects UV rays. Also has anti-inflammatory and mild anti-acne properties.",
+      "benefits": ["Broad-spectrum UV protection", "Anti-inflammatory", "Gentle on sensitive skin", "Non-comedogenic"],
+      "concerns": ["Can leave white cast on darker skin tones"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "sensitive": "One of the best sunscreen options"
+      }
+    },
+    {
+      "inci_name": "Titanium Dioxide",
+      "aliases": [],
+      "function": "Sunscreen, Colorant",
+      "explanation": "A physical mineral sunscreen that blocks UV rays. Gentle and non-irritating, often used in mineral sunscreens.",
+      "benefits": ["UV protection", "Non-irritating", "Good for sensitive skin"],
+      "concerns": ["Can leave white cast"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Centella Asiatica Extract",
+      "aliases": ["Cica", "Gotu Kola", "TECA", "Madecassoside", "Asiaticoside"],
+      "function": "Soothing, Healing, Anti-inflammatory",
+      "explanation": "A plant extract known as 'cica' that calms irritated skin, helps heal acne scars, and reduces redness. Very popular in K-beauty.",
+      "benefits": ["Calms redness and irritation", "Supports wound healing", "Helps fade acne scars", "Strengthens skin barrier"],
+      "concerns": [],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Tea Tree Leaf Oil",
+      "aliases": ["Melaleuca Alternifolia Leaf Oil", "Tea Tree Oil"],
+      "function": "Anti-bacterial, Anti-inflammatory",
+      "explanation": "A natural oil with antibacterial properties that can help fight acne bacteria. Effective but must be diluted — never apply undiluted.",
+      "benefits": ["Kills acne-causing bacteria", "Anti-inflammatory"],
+      "concerns": ["Can be very irritating undiluted", "Allergic reactions possible", "May cause contact dermatitis in some"],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 1,
+      "is_active": true,
+      "skin_type_notes": {
+        "sensitive": "Patch test first; may be too irritating"
+      }
+    },
+    {
+      "inci_name": "Petrolatum",
+      "aliases": ["Petroleum Jelly", "Vaseline", "White Petrolatum"],
+      "function": "Occlusive, Skin protectant",
+      "explanation": "A thick barrier ingredient that seals in moisture and protects the skin. Despite its greasy feel, it's non-comedogenic and helps healing.",
+      "benefits": ["Very effective moisture barrier", "Helps heal damaged skin", "Non-comedogenic"],
+      "concerns": ["Very greasy texture", "Not suitable as a daily moisturizer for oily skin"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "oily": "May feel too heavy; better as a targeted occlusive",
+        "dry": "Excellent for very dry or damaged skin"
+      }
+    },
+    {
+      "inci_name": "Shea Butter",
+      "aliases": ["Butyrospermum Parkii Butter"],
+      "function": "Emollient, Moisturizer",
+      "explanation": "A rich, fatty butter that deeply moisturizes dry skin. Can be heavy for acne-prone skin, especially if oily.",
+      "benefits": ["Deep moisturization", "Soothes dry skin", "Anti-inflammatory properties"],
+      "concerns": ["Heavy texture can clog pores", "Not ideal for oily or acne-prone skin"],
+      "tag": "may_irritate",
+      "acne_friendly": false,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "oily": "Avoid — may contribute to breakouts",
+        "dry": "Excellent — very nourishing",
+        "sensitive": "Usually well-tolerated"
+      }
+    },
+    {
+      "inci_name": "Jojoba Oil",
+      "aliases": ["Simmondsia Chinensis Seed Oil"],
+      "function": "Emollient, Moisturizer",
+      "explanation": "Technically a wax, not an oil. It mimics the skin's natural sebum and is one of the most skin-compatible oils for acne-prone skin.",
+      "benefits": ["Lightweight moisturization", "Balances oil production", "Non-comedogenic", "Anti-inflammatory"],
+      "concerns": ["Rare allergic reactions"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 2,
+      "is_active": false,
+      "skin_type_notes": {
+        "oily": "Good — balances without over-moisturizing"
+      }
+    },
+    {
+      "inci_name": "Coconut Oil",
+      "aliases": ["Cocos Nucifera Oil"],
+      "function": "Emollient, Moisturizer",
+      "explanation": "A very popular natural oil that's highly moisturizing but has a high comedogenic rating, meaning it's very likely to clog pores.",
+      "benefits": ["Rich moisturization", "Natural antimicrobial properties"],
+      "concerns": ["Highly comedogenic — frequently causes breakouts", "Not recommended for acne-prone skin on the face"],
+      "tag": "avoid_acne",
+      "acne_friendly": false,
+      "comedogenic_rating": 4,
+      "is_active": false,
+      "skin_type_notes": {
+        "oily": "Avoid on face",
+        "acne_prone": "Strongly avoid on face"
+      }
+    },
+    {
+      "inci_name": "Isopropyl Myristate",
+      "aliases": ["IPM"],
+      "function": "Emollient, Texture agent",
+      "explanation": "A synthetic emollient that gives products a silky, non-greasy feel. However, it has a high comedogenic rating and frequently triggers breakouts.",
+      "benefits": ["Lightweight, non-greasy texture"],
+      "concerns": ["Highly comedogenic", "Known to clog pores", "Frequently causes acne breakouts"],
+      "tag": "avoid_acne",
+      "acne_friendly": false,
+      "comedogenic_rating": 5,
+      "is_active": false,
+      "skin_type_notes": {
+        "oily": "Avoid",
+        "acne_prone": "Avoid"
+      }
+    },
+    {
+      "inci_name": "Tocopherol",
+      "aliases": ["Vitamin E", "Tocopheryl Acetate"],
+      "function": "Antioxidant, Moisturizer",
+      "explanation": "Vitamin E — an antioxidant that protects skin cells from damage and helps moisturize. Often used to enhance other antioxidants like Vitamin C.",
+      "benefits": ["Antioxidant protection", "Moisturizing", "Helps heal skin"],
+      "concerns": ["Very high concentrations may clog pores in some people"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 2,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Panthenol",
+      "aliases": ["Pro-Vitamin B5", "Dexpanthenol"],
+      "function": "Humectant, Soothing, Healing",
+      "explanation": "Pro-Vitamin B5 that attracts moisture, soothes irritated skin, and speeds up healing. Great for post-acne recovery.",
+      "benefits": ["Soothes irritated skin", "Speeds healing", "Hydrates", "Calms redness"],
+      "concerns": [],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Allantoin",
+      "aliases": [],
+      "function": "Soothing, Healing",
+      "explanation": "A calming ingredient that soothes irritated skin, promotes cell renewal, and speeds up healing. Very gentle and well-tolerated.",
+      "benefits": ["Soothes irritation", "Promotes healing", "Gentle enough for sensitive skin"],
+      "concerns": [],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Aloe Barbadensis Leaf Juice",
+      "aliases": ["Aloe Vera", "Aloe Vera Gel", "Aloe"],
+      "function": "Soothing, Hydrating, Anti-inflammatory",
+      "explanation": "Aloe vera soothes sunburn, calms irritation, and lightly hydrates. Gentle and non-comedogenic.",
+      "benefits": ["Calms irritated skin", "Hydrates", "Soothes redness", "Anti-inflammatory"],
+      "concerns": ["Some people are allergic; patch test recommended"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Zinc PCA",
+      "aliases": ["Zinc Pidolate"],
+      "function": "Oil control, Anti-acne, Antibacterial",
+      "explanation": "A zinc compound that reduces excess oil production and has mild antibacterial effects. Particularly helpful for oily, acne-prone skin.",
+      "benefits": ["Controls excess oil", "Mild antibacterial effect", "Reduces pore size appearance"],
+      "concerns": [],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {
+        "oily": "Excellent for reducing oil and shine"
+      }
+    },
+    {
+      "inci_name": "Propylene Glycol",
+      "aliases": ["1,2-Propanediol"],
+      "function": "Humectant, Solvent",
+      "explanation": "A common moisturizing ingredient that also helps other ingredients absorb into the skin. Generally safe but can irritate very sensitive skin.",
+      "benefits": ["Moisturizes", "Helps ingredient absorption"],
+      "concerns": ["Can irritate sensitive skin at high concentrations"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {
+        "sensitive": "Patch test if you have very reactive skin"
+      }
+    },
+    {
+      "inci_name": "Carbomer",
+      "aliases": ["Carbopol", "Acrylates/C10-30 Alkyl Acrylate Crosspolymer"],
+      "function": "Thickener, Gelling agent",
+      "explanation": "A polymer used to thicken products and give gels their gel-like texture. It's inert and has no direct skin effect.",
+      "benefits": ["Gives products their texture"],
+      "concerns": [],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Sodium PCA",
+      "aliases": [],
+      "function": "Humectant",
+      "explanation": "A natural component of skin's own moisturizing factor. It draws water into the skin, improving hydration.",
+      "benefits": ["Deep hydration", "Naturally found in skin"],
+      "concerns": [],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Polyacrylamide",
+      "aliases": [],
+      "function": "Film-forming, Thickener",
+      "explanation": "Used to give products a smooth, film-like finish. Mostly a texture agent.",
+      "benefits": ["Smooth texture"],
+      "concerns": ["May contain trace acrylamide — a concern raised in some studies but generally considered safe in cosmetics"],
+      "tag": "neutral",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Licorice Root Extract",
+      "aliases": ["Glycyrrhiza Glabra Root Extract", "Glabridin"],
+      "function": "Brightening, Anti-inflammatory",
+      "explanation": "A plant extract that brightens skin and fades dark spots, including post-acne hyperpigmentation. Also calms redness.",
+      "benefits": ["Fades dark spots", "Anti-inflammatory", "Brightens skin tone"],
+      "concerns": [],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": true,
+      "skin_type_notes": {}
+    },
+    {
+      "inci_name": "Green Tea Extract",
+      "aliases": ["Camellia Sinensis Leaf Extract", "EGCG"],
+      "function": "Antioxidant, Anti-inflammatory",
+      "explanation": "Rich in antioxidants (EGCG) that protect skin from environmental damage and reduce redness. Great supporting ingredient.",
+      "benefits": ["Antioxidant protection", "Reduces inflammation", "Soothes redness"],
+      "concerns": [],
+      "tag": "good_for_acne",
+      "acne_friendly": true,
+      "comedogenic_rating": 0,
+      "is_active": false,
+      "skin_type_notes": {}
+    }
+  ]
+}
