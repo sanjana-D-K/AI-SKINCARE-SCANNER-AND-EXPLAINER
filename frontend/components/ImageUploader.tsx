@@ -52,14 +52,14 @@ export default function ImageUploader({ onFile, disabled }: Props) {
     return (
       <div className="space-y-3 animate-scale-in">
         {/* Preview */}
-        <div className="relative rounded-2xl overflow-hidden border-2 border-sage-300 bg-sage-50">
+        <div className="relative rounded-2xl overflow-hidden border-2 border-sage-300/65 bg-sage-50/80 backdrop-blur-sm shadow-[0_8px_28px_rgba(78,130,86,0.15),0_1px_0_rgba(255,255,255,0.9)_inset]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={preview}
             alt="Selected product label"
             className="w-full max-h-72 object-contain"
           />
-          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-white/90 backdrop-blur-sm px-4 py-2.5 border-t border-sage-200">
+          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-white/85 backdrop-blur-md px-4 py-2.5 border-t border-white/65">
             <div className="flex items-center gap-2 min-w-0">
               <span className="text-sage-600 text-lg flex-shrink-0">📷</span>
               <span className="text-sm font-medium text-gray-700 truncate">
@@ -97,10 +97,10 @@ export default function ImageUploader({ onFile, disabled }: Props) {
         className={clsx(
           "relative flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed p-10 text-center cursor-pointer select-none transition-all duration-200 focus:outline-none",
           disabled
-            ? "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed"
+            ? "border-gray-200/70 bg-gray-50/50 opacity-50 cursor-not-allowed"
             : isDragActive
-            ? "border-sage-400 bg-sage-50 scale-[1.01] shadow-inner"
-            : "border-gray-300 bg-white hover:border-sage-300 hover:bg-sage-50"
+            ? "border-sage-400/80 bg-sage-50/80 scale-[1.01] shadow-[inset_0_2px_12px_rgba(78,130,86,0.14)] backdrop-blur-sm"
+            : "border-gray-200/75 bg-white/50 backdrop-blur-sm hover:border-sage-300/75 hover:bg-sage-50/65 shadow-[inset_0_2px_10px_rgba(0,0,0,0.04)]"
         )}
       >
         <input {...getInputProps()} />
@@ -109,7 +109,7 @@ export default function ImageUploader({ onFile, disabled }: Props) {
         <div
           className={clsx(
             "flex h-16 w-16 items-center justify-center rounded-full text-3xl transition-all",
-            isDragActive ? "bg-sage-100 scale-110" : "bg-gray-100"
+            isDragActive ? "bg-sage-100 scale-110 shadow-[0_4px_16px_rgba(78,130,86,0.25)]" : "bg-white/70 backdrop-blur-sm shadow-[0_2px_10px_rgba(0,0,0,0.10),0_1px_0_rgba(255,255,255,0.9)_inset]"
           )}
         >
           {isDragActive ? "📥" : "🖼️"}
@@ -124,7 +124,7 @@ export default function ImageUploader({ onFile, disabled }: Props) {
           </p>
         </div>
 
-        <span className="rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 text-sm font-medium text-gray-700">
+        <span className="rounded-lg bg-white/75 backdrop-blur-sm border border-gray-200/65 shadow-[0_2px_8px_rgba(0,0,0,0.08),0_1px_0_rgba(255,255,255,0.9)_inset] hover:bg-white/90 transition-all px-4 py-2 text-sm font-medium text-gray-700">
           Browse files
         </span>
       </div>
@@ -139,10 +139,10 @@ export default function ImageUploader({ onFile, disabled }: Props) {
       {/* Camera button */}
       <label
         className={clsx(
-          "flex items-center justify-center gap-2.5 rounded-2xl border-2 border-dashed border-gray-300 bg-white py-4 px-4 text-sm font-semibold text-gray-700 transition-all cursor-pointer",
+          "flex items-center justify-center gap-2.5 rounded-2xl border border-gray-200/65 bg-white/55 backdrop-blur-sm py-4 px-4 text-sm font-semibold text-gray-700 transition-all cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.06),0_1px_0_rgba(255,255,255,0.9)_inset]",
           disabled
             ? "opacity-50 cursor-not-allowed"
-            : "hover:border-sage-300 hover:bg-sage-50 hover:text-sage-700 active:scale-[0.99]"
+            : "hover:border-sage-300/75 hover:bg-sage-50/65 hover:text-sage-700 hover:-translate-y-0.5 hover:shadow-[0_6px_18px_rgba(78,130,86,0.14)] active:translate-y-0 active:scale-[0.99]"
         )}
       >
         <span className="text-xl">📸</span>
@@ -158,7 +158,7 @@ export default function ImageUploader({ onFile, disabled }: Props) {
       </label>
 
       {/* Tip */}
-      <div className="flex items-start gap-2 rounded-xl bg-amber-50 border border-amber-200 px-3.5 py-3">
+      <div className="flex items-start gap-2 rounded-xl bg-amber-50/75 backdrop-blur-sm border border-amber-200/65 px-3.5 py-3 shadow-[0_2px_8px_rgba(251,191,36,0.12)]">
         <span className="text-amber-500 text-base flex-shrink-0 mt-0.5">💡</span>
         <p className="text-xs text-amber-800 leading-relaxed">
           <span className="font-semibold">Tip:</span> Photograph the back of the product where

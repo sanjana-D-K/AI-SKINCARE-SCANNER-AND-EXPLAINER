@@ -49,8 +49,8 @@ function LoadingView() {
               i < step
                 ? "bg-sage-100 text-sage-700"
                 : i === step
-                ? "bg-white border border-sage-300 text-gray-800 shadow-sm scale-[1.02]"
-                : "bg-gray-50 text-gray-400"
+                ? "bg-white/80 backdrop-blur-sm border border-sage-300/60 text-gray-800 shadow-[0_4px_16px_rgba(0,0,0,0.09),0_1px_0_rgba(255,255,255,0.9)_inset] scale-[1.02]"
+                : "bg-white/25 backdrop-blur-sm text-gray-400"
             )}
           >
             <span className="text-lg shrink-0">{i < step ? "✅" : s.icon}</span>
@@ -83,7 +83,7 @@ function StepBadge({ n, done }: { n: number; done: boolean }) {
     <span
       className={clsx(
         "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-all",
-        done ? "bg-sage-500 text-white" : "bg-sage-100 text-sage-700"
+        done ? "bg-gradient-to-br from-sage-400 to-sage-600 text-white shadow-[0_2px_8px_rgba(78,130,86,0.40)]" : "bg-sage-100/70 text-sage-700 backdrop-blur-sm"
       )}
     >
       {done ? (
@@ -157,10 +157,10 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
 
       {/* ── Sticky header ─────────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+      <header className="sticky top-0 z-40 bg-white/60 backdrop-blur-2xl border-b border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.05),0_1px_0_rgba(255,255,255,0.9)_inset]">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2.5 min-w-0">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-sage-500 text-white text-lg shadow-sm">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sage-400 to-sage-700 text-white text-lg shadow-[0_4px_14px_rgba(78,130,86,0.45),0_1px_0_rgba(255,255,255,0.25)_inset]">
               🧴
             </div>
             <div className="min-w-0">
@@ -177,8 +177,8 @@ export default function HomePage() {
               className={clsx(
                 "flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all",
                 searchOpen
-                  ? "border-sage-400 bg-sage-50 text-sage-700"
-                  : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
+                  ? "border-sage-400/70 bg-sage-50/80 backdrop-blur-sm text-sage-700 shadow-[0_2px_8px_rgba(78,130,86,0.15)]"
+                  : "border-white/65 bg-white/60 backdrop-blur-md text-gray-600 hover:bg-white/80 shadow-[0_2px_6px_rgba(0,0,0,0.06)]"
               )}
             >
               🔍 <span className="hidden sm:inline">Search</span>
@@ -186,7 +186,7 @@ export default function HomePage() {
             {result && (
               <button
                 onClick={handleReset}
-                className="flex items-center gap-1.5 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-600 hover:border-sage-400 hover:text-sage-700 transition-all"
+                className="flex items-center gap-1.5 rounded-xl border border-white/65 bg-white/60 backdrop-blur-md px-3 py-1.5 text-xs font-semibold text-gray-600 hover:bg-white/80 hover:border-sage-300/70 hover:text-sage-700 shadow-[0_2px_6px_rgba(0,0,0,0.06)] transition-all"
               >
                 📷 <span className="hidden sm:inline">Scan new</span>
               </button>
@@ -221,7 +221,7 @@ export default function HomePage() {
           <div className="space-y-5 animate-fade-in">
 
             {/* Hero */}
-            <div className="rounded-2xl bg-gradient-to-br from-sage-500 to-sage-700 text-white px-6 py-8 text-center shadow-md">
+            <div className="rounded-3xl bg-gradient-to-br from-sage-400 via-sage-600 to-sage-800 text-white px-6 py-10 text-center shadow-[0_24px_64px_rgba(78,130,86,0.45),0_8px_24px_rgba(0,0,0,0.20),0_1px_0_rgba(255,255,255,0.15)_inset] relative overflow-hidden">
               <div className="text-5xl mb-3">🧴</div>
               <h1 className="text-2xl sm:text-3xl font-extrabold leading-tight">
                 Know what&rsquo;s in your skincare
@@ -238,7 +238,7 @@ export default function HomePage() {
                   { icon: "🤖", step: "AI reads & explains" },
                   { icon: "💡", step: "Understand your product" },
                 ].map((s, i) => (
-                  <div key={i} className="bg-white/10 rounded-xl p-3">
+                  <div key={i} className="bg-white/15 backdrop-blur-sm rounded-xl p-3 border border-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.12),0_1px_0_rgba(255,255,255,0.12)_inset]">
                     <div className="text-2xl mb-1">{s.icon}</div>
                     <p className="text-xs text-sage-100 font-medium leading-tight">{s.step}</p>
                   </div>
@@ -284,8 +284,8 @@ export default function HomePage() {
                 className={clsx(
                   "relative w-full rounded-2xl py-4 text-base font-bold tracking-wide transition-all duration-200 shadow-sm",
                   canScan
-                    ? "bg-sage-500 hover:bg-sage-600 text-white hover:shadow-lg active:scale-[0.98]"
-                    : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                    ? "bg-gradient-to-br from-sage-400 to-sage-700 hover:from-sage-500 hover:to-sage-800 text-white shadow-[0_10px_28px_rgba(78,130,86,0.50),0_1px_0_rgba(255,255,255,0.20)_inset] hover:shadow-[0_14px_36px_rgba(78,130,86,0.60)] active:translate-y-0.5 active:scale-[0.98]"
+                    : "bg-white/40 backdrop-blur-sm text-gray-400 cursor-not-allowed border border-gray-200/60"
                 )}
               >
                 {!file ? (
@@ -308,7 +308,7 @@ export default function HomePage() {
 
             {/* Error */}
             {error && (
-              <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-4 animate-fade-in">
+              <div className="rounded-2xl border border-red-200/65 bg-red-50/72 backdrop-blur-sm px-4 py-4 animate-fade-in shadow-[0_4px_16px_rgba(239,68,68,0.10)]">
                 <div className="flex items-start gap-2.5">
                   <span className="text-xl shrink-0">❌</span>
                   <div>
@@ -329,7 +329,7 @@ export default function HomePage() {
                 { icon: "⚡", title: "Fast", desc: "Results in ~15 seconds" },
                 { icon: "🆓", title: "Free", desc: "No account needed" },
               ].map((f) => (
-                <div key={f.title} className="rounded-xl bg-white border border-gray-100 p-3 text-center">
+                <div key={f.title} className="rounded-xl bg-white/65 backdrop-blur-md border border-white/75 p-3 text-center shadow-[0_4px_16px_rgba(0,0,0,0.07),0_1px_0_rgba(255,255,255,0.9)_inset] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.10)]">
                   <div className="text-xl mb-1">{f.icon}</div>
                   <p className="text-xs font-bold text-gray-700">{f.title}</p>
                   <p className="text-[10px] text-gray-400 mt-0.5">{f.desc}</p>
@@ -373,7 +373,7 @@ export default function HomePage() {
 
             {/* Tab bar */}
             <div>
-              <div className="flex gap-1 bg-gray-100 rounded-2xl p-1">
+              <div className="flex gap-1 bg-black/[0.055] backdrop-blur-md rounded-2xl p-1 border border-white/50 shadow-[inset_0_2px_8px_rgba(0,0,0,0.06)]">
                 {(
                   [
                     { id: "actives",  label: "Key Actives",   count: counts.actives,  icon: "⚡" },
@@ -387,8 +387,8 @@ export default function HomePage() {
                     className={clsx(
                       "flex-1 flex flex-col sm:flex-row items-center justify-center gap-1 rounded-xl py-2.5 px-2 text-xs font-semibold transition-all duration-150",
                       tab === t.id
-                        ? "bg-white text-gray-900 shadow-sm"
-                        : "text-gray-500 hover:text-gray-700"
+                        ? "bg-white/90 text-gray-900 shadow-[0_2px_10px_rgba(0,0,0,0.10),0_1px_0_rgba(255,255,255,0.9)_inset]"
+                        : "text-gray-500 hover:text-gray-700 hover:bg-white/30"
                     )}
                   >
                     <span>{t.icon}</span>
@@ -413,7 +413,7 @@ export default function HomePage() {
 
             {/* Ingredient list */}
             {filtered.length === 0 ? (
-              <div className="rounded-2xl border-2 border-dashed border-gray-200 py-14 text-center">
+              <div className="rounded-2xl border-2 border-dashed border-gray-200/65 bg-white/30 backdrop-blur-sm py-14 text-center">
                 <p className="text-3xl mb-2">🎉</p>
                 <p className="font-semibold text-gray-700">None found in this category</p>
                 <p className="text-sm text-gray-400 mt-1">
@@ -451,7 +451,7 @@ export default function HomePage() {
             {/* Scan again */}
             <button
               onClick={handleReset}
-              className="w-full rounded-2xl border-2 border-sage-300 bg-white py-4 text-sm font-bold text-sage-700 hover:bg-sage-50 hover:border-sage-400 hover:shadow-sm transition-all active:scale-[0.99]"
+              className="w-full rounded-2xl border border-sage-300/60 bg-white/65 backdrop-blur-md py-4 text-sm font-bold text-sage-700 shadow-[0_4px_16px_rgba(0,0,0,0.06),0_1px_0_rgba(255,255,255,0.9)_inset] hover:bg-sage-50/75 hover:border-sage-400/70 hover:shadow-[0_8px_24px_rgba(78,130,86,0.18)] hover:-translate-y-0.5 transition-all active:translate-y-0 active:scale-[0.99]"
             >
               📷 Scan another product
             </button>

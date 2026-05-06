@@ -49,7 +49,7 @@ function ScoreRing({ score, colour }: { score: number; colour: string }) {
   const dash = circ * (score / 10);
   return (
     <div className="relative flex items-center justify-center w-28 h-28 shrink-0">
-      <svg width="112" height="112" viewBox="0 0 112 112" className="-rotate-90">
+      <svg width="112" height="112" viewBox="0 0 112 112" className="-rotate-90" style={{ filter: `drop-shadow(0 0 8px ${colour}55)` }}>
         <circle cx="56" cy="56" r={r} fill="none" stroke="#e5e7eb" strokeWidth="10" />
         <circle
           cx="56"
@@ -84,7 +84,7 @@ export default function ResultsSummary({ summary, skinType, totalIngredients, ac
   return (
     <div
       className={clsx(
-        "rounded-2xl bg-gradient-to-br p-5 ring-2 animate-scale-in",
+        "rounded-2xl bg-gradient-to-br p-5 ring-2 animate-scale-in backdrop-blur-md shadow-[0_16px_48px_rgba(0,0,0,0.12),0_6px_16px_rgba(0,0,0,0.08),0_1px_0_rgba(255,255,255,0.65)_inset]",
         cfg.gradient,
         cfg.ring
       )}
@@ -110,7 +110,7 @@ export default function ResultsSummary({ summary, skinType, totalIngredients, ac
             ].map((s) => (
               <span
                 key={s.label}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white/70 border border-gray-200 px-3 py-1 text-xs font-medium text-gray-700"
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-white/80 px-3 py-1 text-xs font-medium text-gray-700 shadow-[0_2px_6px_rgba(0,0,0,0.08)]"
               >
                 {s.icon} {s.label}
               </span>
@@ -123,7 +123,7 @@ export default function ResultsSummary({ summary, skinType, totalIngredients, ac
       {(summary.key_actives.length > 0 || summary.ingredients_to_watch.length > 0) && (
         <div className="mt-4 grid sm:grid-cols-2 gap-3">
           {summary.key_actives.length > 0 && (
-            <div className="rounded-xl bg-white/70 backdrop-blur-sm border border-emerald-200 p-3">
+            <div className="rounded-xl bg-white/75 backdrop-blur-sm border border-emerald-200/65 p-3 shadow-[0_4px_12px_rgba(0,0,0,0.07),0_1px_0_rgba(255,255,255,0.9)_inset]">
               <p className="text-xs font-bold text-emerald-700 uppercase tracking-wide mb-2">
                 ⚡ Key actives found
               </p>
@@ -141,7 +141,7 @@ export default function ResultsSummary({ summary, skinType, totalIngredients, ac
           )}
 
           {summary.ingredients_to_watch.length > 0 && (
-            <div className="rounded-xl bg-white/70 backdrop-blur-sm border border-amber-200 p-3">
+            <div className="rounded-xl bg-white/75 backdrop-blur-sm border border-amber-200/65 p-3 shadow-[0_4px_12px_rgba(0,0,0,0.07),0_1px_0_rgba(255,255,255,0.9)_inset]">
               <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-2">
                 ⚠️ Watch these
               </p>

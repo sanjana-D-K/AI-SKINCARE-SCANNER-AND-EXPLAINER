@@ -66,10 +66,10 @@ export default function SkinTypeSelector({ value, onChange }: Props) {
             type="button"
             onClick={() => onChange(opt.value)}
             className={clsx(
-              "relative flex items-start gap-3 rounded-2xl border-2 p-3.5 text-left transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-400",
+              "relative flex items-start gap-3 rounded-2xl border-2 p-3.5 text-left transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-400",
               selected
-                ? `${opt.activeBg} ${opt.activeBorder} shadow-sm`
-                : "border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50"
+                ? `${opt.activeBg} ${opt.activeBorder} shadow-[0_6px_20px_rgba(0,0,0,0.12),0_1px_0_rgba(255,255,255,0.9)_inset] -translate-y-0.5`
+                : "border-white/65 bg-white/55 backdrop-blur-md hover:bg-white/75 hover:border-gray-200/80 hover:-translate-y-0.5 shadow-[0_2px_8px_rgba(0,0,0,0.06),0_1px_0_rgba(255,255,255,0.85)_inset]"
             )}
           >
             {/* Check indicator */}

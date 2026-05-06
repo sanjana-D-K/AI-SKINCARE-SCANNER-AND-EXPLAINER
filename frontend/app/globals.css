@@ -17,10 +17,17 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: "Inter", system-ui, sans-serif;
-  background: #f4f8f5;
   color: #111827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e6eeea;
+  background-image:
+    radial-gradient(ellipse at 12% 8%,  rgba(160, 210, 170, 0.60) 0%, transparent 50%),
+    radial-gradient(ellipse at 88% 5%,  rgba(196, 180, 230, 0.45) 0%, transparent 46%),
+    radial-gradient(ellipse at 4%  62%, rgba(240, 200, 215, 0.32) 0%, transparent 46%),
+    radial-gradient(ellipse at 94% 60%, rgba(155, 205, 165, 0.50) 0%, transparent 52%),
+    radial-gradient(ellipse at 50% 98%, rgba(180, 210, 240, 0.30) 0%, transparent 48%);
+  min-height: 100vh;
 }
 
 /* ── File inputs ── */
@@ -32,9 +39,9 @@ label input[type="file"] { display: none; }
 ::-webkit-scrollbar-thumb    { background: #9dc0a2; border-radius: 4px; }
 
 /* ── Animations ── */
-@keyframes fadeIn  { from { opacity: 0; }                           to { opacity: 1; } }
-@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes scaleIn { from { opacity: 0; transform: scale(.96); }    to { opacity: 1; transform: scale(1); } }
+@keyframes fadeIn  { from { opacity: 0; }                              to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(.91); }       to { opacity: 1; transform: scale(1); } }
 @keyframes pulse2  { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
 @keyframes spin    { to { transform: rotate(360deg); } }
 @keyframes shimmer {
@@ -42,9 +49,9 @@ label input[type="file"] { display: none; }
   100% { background-position:  400px 0; }
 }
 
-.animate-fade-in  { animation: fadeIn  .35s ease both; }
-.animate-slide-up { animation: slideUp .4s  ease both; }
-.animate-scale-in { animation: scaleIn .3s  ease both; }
+.animate-fade-in   { animation: fadeIn  .35s ease both; }
+.animate-slide-up  { animation: slideUp .45s cubic-bezier(.22, 1, .36, 1) both; }
+.animate-scale-in  { animation: scaleIn .38s cubic-bezier(.22, 1, .36, 1) both; }
 .animate-spin-slow { animation: spin 1.2s linear infinite; }
 
 /* ── Skeleton shimmer ── */
@@ -55,16 +62,33 @@ label input[type="file"] { display: none; }
   border-radius: 12px;
 }
 
-/* ── Card ── */
+/* ── Card — glassmorphism with layered depth ── */
 .card {
-  @apply bg-white rounded-2xl border border-gray-200 shadow-sm;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(22px) saturate(1.5);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.80);
+  box-shadow:
+    0 1px 0   rgba(255, 255, 255, 0.95) inset,
+    0 0  0 1px rgba(0, 0, 0, 0.030),
+    0 10px 32px rgba(0, 0, 0, 0.090),
+    0  3px  8px rgba(0, 0, 0, 0.050);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+.card:hover {
+  box-shadow:
+    0 1px 0   rgba(255, 255, 255, 0.95) inset,
+    0 0  0 1px rgba(0, 0, 0, 0.040),
+    0 18px 52px rgba(0, 0, 0, 0.110),
+    0  6px 16px rgba(0, 0, 0, 0.065);
 }
 
 /* ── Ingredient tag border strip ── */
-.tag-strip-good    { border-left: 4px solid #4e8256; }
-.tag-strip-neutral { border-left: 4px solid #9ca3af; }
-.tag-strip-caution { border-left: 4px solid #f59e0b; }
-.tag-strip-avoid   { border-left: 4px solid #ef4444; }
+.tag-strip-good    { border-left: 3px solid #34d399; }
+.tag-strip-neutral { border-left: 3px solid #cbd5e1; }
+.tag-strip-caution { border-left: 3px solid #fbbf24; }
+.tag-strip-avoid   { border-left: 3px solid #f87171; }
 
 /* ── Step connector line ── */
 .step-line::after {
@@ -74,6 +98,6 @@ label input[type="file"] { display: none; }
   top: 100%;
   width: 2px;
   height: 24px;
-  background: #c5dbc8;
+  background: linear-gradient(to bottom, #c5dbc8, transparent);
   transform: translateX(-50%);
 }

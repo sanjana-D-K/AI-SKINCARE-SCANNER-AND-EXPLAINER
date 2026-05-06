@@ -18,34 +18,34 @@ const TAG_CONFIG: Record<
   good_for_acne: {
     label: "Good for acne",
     emoji: "✅",
-    badgeBg: "bg-emerald-100",
+    badgeBg: "bg-emerald-100/80",
     badgeText: "text-emerald-800",
-    strip: "border-l-4 border-emerald-400",
-    headerBg: "bg-emerald-50/60",
+    strip: "border-l-[3px] border-emerald-400",
+    headerBg: "bg-gradient-to-r from-emerald-50/90 to-transparent",
   },
   neutral: {
     label: "Neutral",
     emoji: "⚪",
-    badgeBg: "bg-gray-100",
+    badgeBg: "bg-gray-100/80",
     badgeText: "text-gray-600",
-    strip: "border-l-4 border-gray-300",
-    headerBg: "bg-gray-50/60",
+    strip: "border-l-[3px] border-slate-300",
+    headerBg: "bg-gradient-to-r from-gray-50/90 to-transparent",
   },
   may_irritate: {
     label: "May irritate",
     emoji: "⚠️",
-    badgeBg: "bg-amber-100",
+    badgeBg: "bg-amber-100/80",
     badgeText: "text-amber-800",
-    strip: "border-l-4 border-amber-400",
-    headerBg: "bg-amber-50/60",
+    strip: "border-l-[3px] border-amber-400",
+    headerBg: "bg-gradient-to-r from-amber-50/90 to-transparent",
   },
   avoid_acne: {
     label: "Avoid for acne",
     emoji: "🚫",
-    badgeBg: "bg-red-100",
+    badgeBg: "bg-red-100/80",
     badgeText: "text-red-800",
-    strip: "border-l-4 border-red-400",
-    headerBg: "bg-red-50/40",
+    strip: "border-l-[3px] border-red-400",
+    headerBg: "bg-gradient-to-r from-red-50/80 to-transparent",
   },
 };
 
@@ -89,7 +89,7 @@ export default function IngredientCard({ ingredient, index }: Props) {
   return (
     <div
       className={clsx(
-        "rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden transition-shadow hover:shadow-md animate-slide-up",
+        "rounded-2xl bg-white/72 backdrop-blur-md border border-white/80 shadow-[0_1px_0_rgba(255,255,255,0.9)_inset,0_4px_18px_rgba(0,0,0,0.08),0_2px_6px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-200 hover:shadow-[0_1px_0_rgba(255,255,255,0.9)_inset,0_14px_40px_rgba(0,0,0,0.12),0_4px_14px_rgba(0,0,0,0.07)] hover:-translate-y-0.5 animate-slide-up",
         cfg.strip
       )}
       style={{ animationDelay: `${Math.min(index * 35, 400)}ms` }}
@@ -100,7 +100,7 @@ export default function IngredientCard({ ingredient, index }: Props) {
           {/* Name + active badge */}
           <div className="flex flex-wrap items-center gap-1.5 flex-1 min-w-0">
             {ingredient.is_active && (
-              <span className="shrink-0 text-[10px] font-bold tracking-wide bg-violet-100 text-violet-700 px-2 py-0.5 rounded-full uppercase">
+              <span className="shrink-0 text-[10px] font-bold tracking-wide bg-gradient-to-r from-violet-100 to-lavender-100 text-violet-700 px-2 py-0.5 rounded-full uppercase border border-violet-200/60 shadow-[0_1px_4px_rgba(139,92,246,0.18)]">
                 Active
               </span>
             )}
@@ -130,7 +130,7 @@ export default function IngredientCard({ ingredient, index }: Props) {
 
         {/* Skin type note pill */}
         {hasNote && (
-          <div className="mt-3 inline-flex items-start gap-1.5 rounded-xl bg-violet-50 border border-violet-200 px-3 py-2 text-xs text-violet-800 w-full">
+          <div className="mt-3 inline-flex items-start gap-1.5 rounded-xl bg-violet-50/80 backdrop-blur-sm border border-violet-200/65 px-3 py-2 text-xs text-violet-800 w-full shadow-[0_2px_8px_rgba(139,92,246,0.09)]">
             <span className="shrink-0 mt-0.5">💜</span>
             <span>
               <span className="font-semibold">For your skin: </span>
@@ -142,11 +142,11 @@ export default function IngredientCard({ ingredient, index }: Props) {
 
       {/* ── Expandable details ── */}
       {hasDetails && (
-        <div className="border-t border-gray-100">
+        <div className="border-t border-white/50">
           <button
             type="button"
             onClick={() => setExpanded((p) => !p)}
-            className="w-full flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-500 hover:bg-gray-50 transition-colors group"
+            className="w-full flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-500 hover:bg-white/50 transition-colors group"
             aria-expanded={expanded}
           >
             <span className="group-hover:text-gray-700 transition-colors">
